@@ -105,7 +105,6 @@ for ligand_stable_name in tqdm(ligand_stable_names):
         'solid_cone_angle': solid_cone_angle,
         'G_parameter': G_parameter
     })
-    break
 
 steric_descriptor_df = pd.DataFrame(steric_descriptor_list)
 steric_descriptor_df.to_csv('./steric_descriptors.csv', sep=';', index=False)

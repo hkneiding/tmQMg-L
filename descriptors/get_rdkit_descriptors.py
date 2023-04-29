@@ -26,14 +26,13 @@ with open('/home/hkneiding/Documents/UiO/Data/tmQMg-L/ligands_xyz.xyz', 'r') as 
 # xyzs to write
 xyz_names = []
 
-# result variable
+# result variables
+morgan_fingerprint_list = []
 rdkit_descriptor_list = []
 
 # go through ligands
 for i, ligand in enumerate(tqdm(ligand_data.to_dict(orient='records'))):
 
-    print('')
-    print(list(eval(ligand['parent_metal_occurrences']).values()))
     xyz_names.append(list(eval(ligand['parent_metal_occurrences']).values())[0][0])
 
     # read smiles
@@ -65,16 +64,23 @@ for i, ligand in enumerate(tqdm(ligand_data.to_dict(orient='records'))):
     # n rotatable bonds
     n_rotatable_bonds = rdMolDescriptors.CalcNumRotatableBonds(mol)
 
+    morgan_fingerprint_list.append({
+        'ligand_name': ligand['name'],
+        'morgan_fingerprint': str(morgan_fingerprint).replace('[','').replace(']','')
+    })
+^
     rdkit_descriptor_list.append({
         'ligand_name': ligand['name'],
         'smiles': Chem.MolToSmiles(mol, allHsExplicit=True),
-        'morgan_fingerprint': morgan_fingerprint,
         'logp': logp,
         'n_aliphatic_rings': n_aliphatic_rings,
         'n_aromatic_rings': n_aromatic_rings,
         'n_saturated_rings': n_saturated_rings,
         'n_rotatable_bonds': n_rotatable_bonds
     })
+
+morgan_fingerprint_df = pd.DataFrame(morgan_fingerprint_list)
+morgan_fingerprint_df.to_csv('morgan_fingerprint.csv', sep=';', index=False)
 
 rdkit_descriptor_df = pd.DataFrame(rdkit_descriptor_list)
 rdkit_descriptor_df.to_csv('./rdkit_descriptors.csv', sep=';', index=False)
