@@ -22,7 +22,7 @@ This repository contains the data files of the ligands dataset tmQMg-L containin
 - Directory containing the geometries of all ligands ([xyz/ligands_xyzs.xyz](xyz/ligands_xyzs.xyz)), only the stable ligands ([xyz/ligands_stable_xyzs.xyz](xyz/ligands_stable_xyzs.xyz)) and the optimised stable ligands ([xyz/ligands_stable_xyzs_opt.xyz](xyz/ligands_stable_xyzs_opt.xyz)).
 
 ###### [descriptors/](descriptors/)
-- Directory containing the RDKit, steric and electronic descriptors in separate files and the scripts to create them. Furthermore, a script to merge them to one.
+- Directory containing the RDKit, steric and electronic descriptors in separate files and the scripts to create them. Furthermore, a script to merge them into one.
 
 [![CC BY NC 4.0][cc-by-nc-image]][cc-by-nc]
 
