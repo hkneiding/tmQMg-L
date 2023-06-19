@@ -42,4 +42,4 @@ del col_names[col_names.index('stable_occurrence_name')]
 col_names.insert(1, 'stable_occurrence_name')
 full_df = full_df[col_names]
 
-full_df.to_csv('./descriptors.csv', sep=';', index=False)
+full_df.to_csv('./../ligands_descriptors.csv', sep=';', index=False)
