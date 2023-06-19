@@ -23,6 +23,7 @@ This repository contains the data files of the ligands dataset tmQMg-L containin
 
 ###### [descriptors/](descriptors/)
 - Directory containing the RDKit, steric and electronic descriptors in separate files and the scripts to create them. Furthermore, a script to merge them into one.
+---
 
 [![CC BY NC 4.0][cc-by-nc-image]][cc-by-nc]
 
