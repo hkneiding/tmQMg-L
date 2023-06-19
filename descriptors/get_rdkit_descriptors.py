@@ -6,20 +6,21 @@ from rdkit import Chem
 from rdkit.Chem import rdMolDescriptors
 
 
-# The RDKit derived properties do not depend on the specific
-# coordinates of different instances of the same ligand. All
-# occurrences of the same ligand should have the same properties.
-# Therefore, simply the corresponding SMILES string can be used
-# for each ligand.
+# This script calculates a selection of RDKit descriptors for
+# each ligand. The RDKit derived properties do not depend
+# on the specific coordinates of different instances of the
+# same ligand. All occurrences of the same ligand should have
+# the same properties. Therefore, simply the corresponding
+# SMILES string is used for each ligand.
 
 # set print options
 np.set_printoptions(threshold=np.inf)
 
 # read data
-ligand_data = pd.read_csv('/home/hkneiding/Documents/UiO/Data/tmQMg-L/ligands_misc_info.csv', sep=';')
+ligand_data = pd.read_csv('./../ligands_misc_info.csv', sep=';')
 # load xyz
 xyzs = {}
-with open('/home/hkneiding/Documents/UiO/Data/tmQMg-L/ligands_xyz.xyz', 'r') as fh:
+with open('./../xyz/ligands_xyzs.xyz', 'r') as fh:
     for xyz in fh.read().split('\n\n'):
         xyzs[xyz.split('\n')[1]] = xyz
 
@@ -65,12 +66,12 @@ for i, ligand in enumerate(tqdm(ligand_data.to_dict(orient='records'))):
     n_rotatable_bonds = rdMolDescriptors.CalcNumRotatableBonds(mol)
 
     morgan_fingerprint_list.append({
-        'ligand_name': ligand['name'],
+        'name': ligand['name'],
         'morgan_fingerprint': str(morgan_fingerprint).replace('[','').replace(']','')
     })
-^
+
     rdkit_descriptor_list.append({
-        'ligand_name': ligand['name'],
+        'name': ligand['name'],
         'smiles': Chem.MolToSmiles(mol, allHsExplicit=True),
         'logp': logp,
         'n_aliphatic_rings': n_aliphatic_rings,
