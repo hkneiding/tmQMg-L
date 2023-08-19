@@ -2447,7 +2447,6 @@ ligand2405-0;[CH2]=[CH][n]1[cH][cH][n][cH]1;0.9836;0;1;0;1
 ligand2406-0;[CH3][C@H](/[N]=[CH]/[c]1[c]([O])[cH][cH][c]2[cH][cH][cH][cH][c]12)[c]1[cH][cH][cH][cH][cH]1;5.1637;0;3;0;3
 ligand2407-0;[CH3][N]([CH3])[CH2][CH2][CH2][NH][CH2][c]1[cH][cH][c]2[c]([Cl])[cH][c]([Cl])[c]([NH2])[c]2[n]1;3.1651;0;2;0;6
 ligand2408-0;[CH]#[N];0.13978;0;0;0;0
-ligand2409-0;[C]#[N];0.09637;0;0;0;0
 ligand2410-0;[CH3][C]1=[CH][CH]=[CH][N]([CH3])[C]1;1.43059;1;0;0;0
 ligand2411-0;[O]=[N+]([O-])[c]1[cH][cH][c]([CH2][c]2[cH][cH][n][cH][cH]2)[cH][cH]1;2.5806;0;2;0;3
 ligand2412-0;[CH2]=[C]([CH3])[CH2][C@H]1[CH2][CH2][CH2][N]1;1.7194;1;0;1;2
@@ -6892,7 +6891,6 @@ ligand6795-0;[CH3][O]/[C]=[CH]/[C]([C]1=[CH][CH]=[CH][CH]=[C]1)[c]1[cH][cH][c]([
 ligand6796-0;[CH3][N]([CH2][CH2][CH2][CH2][CH2][CH2][CH2][CH2][CH2][CH2][CH2][CH2][N]([CH3])[CH2][c]1[cH][cH][cH][cH][c]1[O])[CH2][c]1[cH][cH][cH][cH][c]1[O];7.43900000000001;0;2;0;17
 ligand6797-0;[CH3][CH]([CH3])[N]/[C](=[N]\[c]1[c]([CH]([CH3])[CH3])[cH][cH][cH][c]1[CH]([CH3])[CH3])[P]([N][CH]([CH3])[CH3])([c]1[cH][cH][cH][cH][cH]1)[c]1[cH][cH][cH][cH][cH]1;7.53010000000001;0;3;0;9
 ligand6798-0;[cH]1[cH][cH][c]([N]([c]2[cH][cH][cH][cH][n]2)[c]2[cH][cH][cH][cH][n]2)[n][cH]1;3.3414;0;3;0;3
-ligand6799-0;[C]#[N][CH2][C]([CH3])([CH2][N]#[C])[CH2][N]#[C];0.92971;0;0;0;3
 ligand6800-0;[O][C](=[O])[C]([O])([c]1[cH][cH][cH][cH][cH]1)[c]1[cH][cH][cH][cH][cH]1;2.3178;0;2;0;3
 ligand6801-0;[cH]1[cH][c]2[cH][cH][c]3[cH][cH][c]([CH2][n]4[c]5[cH][cH][cH][cH][c]5[n][c]4[c]4[cH][cH][c]5[cH][cH][c]6[cH][cH][cH][c]7[cH][cH][c]4[c]5[c]67)[c]4[cH][cH][c]([cH]1)[c]2[c]34;10.5948;0;10;0;3
 ligand6802-0;[O][C@@H]([CH2][c]1[cH][cH][cH][cH][n]1)[c]1[cH][cH][cH][cH][n]1;2.1909;0;2;0;3
@@ -17643,7 +17641,6 @@ ligand17442-0;[CH3][O][c]1[cH][c]([O][CH3])[c]2[c]([cH]1)[o][c](=[O])[c]1[cH][cH
 ligand17443-0;[O][C](=[O])[C]([OH])([c]1[cH][cH][cH][cH][n]1)[c]1[cH][cH][cH][cH][n]1;0.6696;0;2;0;3
 ligand17444-0;[CH3][C]1[C]([CH3])=[C]([CH3])[C]([CH3])=[C]1[c]1[cH][cH][cH][c]2[c]1[N][CH2][CH2][CH2]2;4.58659;2;1;0;1
 ligand17445-0;[CH3][CH2][O][C](=[O])[CH2][n]1[cH][cH][c]([c]2[cH][cH][cH][cH][n]2)[n]1;1.5566;0;2;0;4
-ligand17446-0;[C]#[N][c]1[cH][cH][c]([N]#[C])[cH][cH]1;2.24094;0;1;0;0
 ligand17447-0;[CH3][CH]([CH3])[c]1[cH][cH][cH][c]([CH]([CH3])[CH3])[c]1/[N]=[C](\[c]1[cH][cH][cH][cH][cH]1)[C@]([CH3])([OH])[c]1[cH][cH][cH][cH][cH]1;6.96190000000001;0;3;0;6
 ligand17448-0;[C]1=[C]([O][P]([CH]2[CH2][CH2][CH2][CH2][CH2]2)[CH]2[CH2][CH2][CH2][CH2][CH2]2)[CH]=[CH][CH]=[C]1[O][P]([CH]1[CH2][CH2][CH2][CH2][CH2]1)[CH]1[CH2][CH2][CH2][CH2][CH2]1;10.28499;5;0;4;8
 ligand17449-0;[CH3][O][C@@]1([O])[c]2[cH][cH][cH][cH][c]2[O][N]1/[N]=[C](\[CH3])[c]1[cH][cH][cH][c](/[C]([CH3])=[N]/[n]2[o][c]3[cH][cH][cH][cH][c]3[c]2=[O])[n]1;3.4826;1;4;0;5
@@ -20025,7 +20022,6 @@ ligand19809-0;[CH2][CH2][CH2][P]([c]1[cH][cH][cH][cH][cH]1)[c]1[cH][cH][cH][cH][
 ligand19810-0;[CH3][O][c]1[cH][cH][c]([CH2][N]([CH2][c]2[cH][cH][c]([O][CH3])[cH][cH]2)[C]([S])=[S])[cH][cH]1;4.1884;0;2;0;6
 ligand19811-0;[CH3][c]1[cH][cH][c](/[CH]=[N]/[CH2][CH2][c]2[cH][nH][cH][n]2)[c]([O])[cH]1;2.52352;0;2;0;4
 ligand19812-0;[CH3][S][c]1[cH][cH][cH][cH][c]1/[N]=[CH]/[c]1[cH][cH][cH][c]([c]2[cH][cH][c]([Cl])[cH][cH]2)[n]1;5.9229;0;3;0;4
-ligand19813-0;[C]#[N][C](=[O])[C]#[C][S];0.31707;0;0;0;0
 ligand19814-0;[CH3][C@@H]([NH][CH2][c]1[cH][c]([N+](=[O])[O-])[cH][cH][c]1[O])[c]1[cH][cH][cH][cH][cH]1;3.5894;0;2;0;5
 ligand19815-0;[CH2]=[C]([CH3])/[C]([CH3])=[CH]/[S];2.6638;0;0;0;1
 ligand19816-0;[CH3][CH2][C](=[O])[N][O];-0.1271;0;0;0;1
@@ -21178,7 +21174,6 @@ ligand20955-0;[O]=[C]([N][c]1[cH][cH][cH][c]([Cl])[cH]1)[c]1[cH][cH][cH][cH][n]1
 ligand20956-0;[CH3][C]1=[C]([CH3])[N]([c]2[cH][cH][cH][cH][cH]2)[C][S]1;3.48749;1;1;0;1
 ligand20957-0;[N]=[C]([c]1[cH][cH][cH][cH][cH]1)[c]1[cH][cH][cH][cH][c]1[C](=[O])[c]1[cH][cH][cH][cH][cH]1;3.5551;0;3;0;4
 ligand20958-0;[CH3][c]1[cH][c]([CH3])[c]([CH3])[c]([CH2][N]2[C][S][c]3[cH][cH][cH][cH][c]32)[c]1[CH3];5.02887;1;2;0;2
-ligand20959-0;[C]#[N][c]1[cH][cH][c]2[c]([C](=[O])[O][CH2][CH3])[c]([N]#[C])[c]([C](=[O])[O][CH2][CH3])[c]-2[cH][cH]1;3.69914;2;0;0;4
 ligand20960-0;[CH3][c]1[cH][c]([CH3])[c]([N]2[CH][N]([CH2][CH2][P]([c]3[cH][cH][cH][cH][cH]3)[c]3[cH][cH][cH][cH][cH]3)[C]=[CH]2)[c]([CH3])[cH]1;5.26044;1;3;0;6
 ligand20961-0;[CH3][C]1[C]([CH3])=[C]([CH3])[C]([CH3])=[C]1[Si]([CH3])([CH3])[O][CH2][C@@H]1[CH2][CH2][CH2][NH]1;3.76019;2;0;1;4
 ligand20962-0;[NH2]=[C]([N][OH])[c]1[cH][cH][c]([N+](=[O])[O-])[cH][cH]1;0.5635;0;1;0;2
@@ -28514,7 +28509,6 @@ ligand28273-0;[CH3][c]1[cH][cH][n][c]([NH][P]([O])(=[O])[NH][c]2[cH][c]([CH3])[c
 ligand28274-0;[CH3][C]1=[N][C](=[S])[N]=[C]([C]([F])([F])[F])[CH]1;1.95339;1;0;0;0
 ligand28275-0;[O][N][C@@]12[CH2][O][CH2][C@]1([N][O])[C@H]1[CH2][CH2][CH2][C@]2([OH])[CH2]1;-0.6711;3;0;3;2
 ligand28276-0;[CH3][N]([CH3])[c]1[n][cH][cH][c]([c]2[cH][cH][cH][cH][n]2)[n]1;1.653;0;2;0;2
-ligand28277-0;[C]=[N][CH2][N]#[C];0.04417;0;0;0;1
 ligand28278-0;[CH3][O][C](=[O])[CH]([CH2][c]1[cH][cH][c]2[cH][cH][c]3[cH][cH][c]([CH2][CH]([C](=[O])[O][CH3])[C](=[O])[O][CH3])[n][c]3[c]2[n]1)[C](=[O])[O][CH3];1.7924;0;3;0;8
 ligand28279-0;[O]=[C][N]1[CH2][CH2][CH2][CH2][CH2]1;0.5395;1;0;1;1
 ligand28280-0;[CH3][CH2][O][C](=[O])[CH]/[C]([CH3])=[N]/[CH]([CH3])[CH3];1.62309;0;0;0;4

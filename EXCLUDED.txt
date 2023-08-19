@@ -25,3 +25,9 @@ ligand29690-0
 ligand30531-0
 ligand31364-0
 ligand31378-0
+ligand2409-0
+ligand6799-0
+ligand17446-0
+ligand19813-0
+ligand20959-0
+ligand28277-0
