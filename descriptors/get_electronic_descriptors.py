@@ -3,6 +3,7 @@ import re
 import sys
 import time
 import pickle
+import numpy as np
 import pandas as pd
 from tqdm import tqdm
 
@@ -64,11 +65,11 @@ def get_orbital_symmetry(occupations: dict):
 output_path = sys.argv[1]
 
 # get misc data
-ligand_data = pd.read_csv('./../ligands_misc_info.csv', sep=';')
+ligand_data = pd.read_csv('./../ligands_misc_info_full.csv', sep=';')
 
 # get most stable ligand names
-with open('./../stable.txt', 'r') as fh:
-    ligand_stable_names = {_.split(' | ')[0]: _.split(' | ')[1] for _ in fh.read().strip().split('\n')}
+with open('./../stable.csv', 'r') as fh:
+    ligand_stable_names = {_.split(';')[0]: _.split(';')[1] for _ in fh.read().strip().split('\n')}
 
 # get output result files
 result_files = [f for f in os.listdir(output_path) if os.path.isfile(os.path.join(output_path, f))]
@@ -105,6 +106,9 @@ for result_file in tqdm(result_files):
             metal_bound_homo_idx = None
             metal_bound_lumo_idx = None
             homo_idx = 0
+
+            print(sp_result[i].keys())
+            exit()
 
             # get orbital information
             for j, _ in enumerate(sp_result[i]['molecular_orbital_data']):
@@ -174,6 +178,21 @@ for result_file in tqdm(result_files):
                 property_dict['polarisability'] = sp_result[i]['isotropic_polarisability']
             if 'frequencies' in list(sp_result[i].keys()):
                 property_dict['largest_frequency'] = sp_result[i]['frequencies'][-1]
+            if 'principal_moments' in list(sp_result[i].keys()):
+
+                pass
+
+                #I1 = sp_result[i]['principal_moments'][0]
+                #I2 = sp_result[i]['principal_moments'][1]
+                #I3 = sp_result[i]['principal_moments'][2]
+
+                #property_dict['I1/I3'] = I1 / I3
+                #property_dict['I2/I3'] = I2 / I3
+                #property_dict['eccentricity'] = np.sqrt(I3**2 - I1**2) / I3
+
+
+            if 'molar_volume' in list(sp_result[i].keys()):
+                property_dict['molar_volume'] = sp_result[i]['molar_volume']
 
             electronic_descriptor_list.append(property_dict)
 
