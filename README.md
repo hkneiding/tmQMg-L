@@ -18,6 +18,7 @@ This repository contains the data files of the ligands dataset tmQMg-L containin
 - The columns `n_metal_bound`, `n_dentic_bound`, and `n_haptic_bound` refer to the number of atoms bound to the metal center, the number of which are dentic, and the number of which are haptic, respectively.
 - The column `n_atoms` contains the total number of atoms in the ligand. For each element, the number of occurrences in the ligand is listed in column `X` where X denotes the element symbol.
 - The columns `dentic_X` and `haptic_X` where X denotes the element symbol contain the number of dentic/haptic bound atoms of that element.
+- The column `is_alternative_charge` is a boolean flag that denotes if a ligand is occuring with an alternative charge. For some of the ligands, the charge determination algorithm gave multiple different charges for different occurrences of the same ligand (same topology and connection atoms). Usually one charge was in the majority and all others were discarded as outliers/errors. However, in cases where another charge was present in a significant amount (>25%) it was also recorded with the flag `is_alternative_charge` set to `True`.
 
 ###### [ligands_descriptors.csv](ligands_descriptors.csv)
 - The calculated RDKit, steric and electronic descriptors for all ligands as described in the publication.
