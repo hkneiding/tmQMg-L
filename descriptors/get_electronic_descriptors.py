@@ -107,9 +107,6 @@ for result_file in tqdm(result_files):
             metal_bound_lumo_idx = None
             homo_idx = 0
 
-            print(sp_result[i].keys())
-            exit()
-
             # get orbital information
             for j, _ in enumerate(sp_result[i]['molecular_orbital_data']):
 
@@ -180,16 +177,17 @@ for result_file in tqdm(result_files):
                 property_dict['largest_frequency'] = sp_result[i]['frequencies'][-1]
             if 'principal_moments' in list(sp_result[i].keys()):
 
-                pass
+                line = sp_result[i]['principal_moments'].split('--')[-1][2:]
 
-                #I1 = sp_result[i]['principal_moments'][0]
-                #I2 = sp_result[i]['principal_moments'][1]
-                #I3 = sp_result[i]['principal_moments'][2]
+                # add principal moment ratios if no error in Gaussian output
+                if '*' not in line:
 
-                #property_dict['I1/I3'] = I1 / I3
-                #property_dict['I2/I3'] = I2 / I3
-                #property_dict['eccentricity'] = np.sqrt(I3**2 - I1**2) / I3
+                    I1 = float(line[0:10])
+                    I2 = float(line[10:20])
+                    I3 = float(line[20:30])
 
+                    property_dict['I1/I3'] = I1 / I3
+                    property_dict['I2/I3'] = I2 / I3
 
             if 'molar_volume' in list(sp_result[i].keys()):
                 property_dict['molar_volume'] = sp_result[i]['molar_volume']
