@@ -7,7 +7,7 @@ from functools import reduce
 # descriptors.
 
 # load individual descriptor files
-rdkit_df = pd.read_csv('./rdkit_descriptors.csv', sep=';')
+rdkit_df = pd.read_csv('./rdkit_descriptors.csv', sep=';').drop('smiles', axis=1)
 steric_df = pd.read_csv('./steric_descriptors.csv', sep=';')
 sp_df = pd.read_csv('./electronic_descriptors_sp.csv', sep=';').drop('occurrence_name', axis=1).add_prefix('L*-')
 opt_df = pd.read_csv('./electronic_descriptors_opt+sp.csv', sep=';').drop('occurrence_name', axis=1).add_prefix('L_free-')
