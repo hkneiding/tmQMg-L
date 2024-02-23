@@ -36,6 +36,9 @@ This repository contains the data files of the ligands dataset tmQMg-L containin
 ###### [benchmarks/OctLig_tmQMg-L_charge_agreement.csv](benchmarks/OctLig_tmQMg-L_charge_agreement.csv)
 - A list of ligands included in the OctLig (Kulik and co-workers, DOI: 10.1021/acs.jctc.2c00468) and tmQMg-L datasets and their determined charges. The columns `OctLig_name` and `tmQMg-L_name` provide the identifiers from both the OctLig and tmQMg-L datasets, respectively, and the columns `OctLig_charge` and `tmQMg-L_charge` provide their corresponding predicted charges. The column `charge_agreement` contains TRUE if the two charges agree and FALSE otherwise. The last column provides the SMILES string for each ligand. Graph matching was done by generating cutoff radius graphs for all ligands of both datasets and performing node attributed graph isomorphy tests to determine equivalent ligands in the two datasets. If a ligand is only found in the OctLig dataset but not in tmQMg-L, only the columns `OctLig_name` and `smiles` will contain entries.
 
+###### [benchmarks/1.37M_space_ground_truth.csv](benchmarks/1.37M_space_ground_truth.csv)
+- The ground truth values for Polarizability and HOMO-LUMO gap calculated with GFN2-xTB of a chemical space of square-planar palladium (II) complexes with 50 monodentate ligands (25 neutral, 25 mono-anionic). This space was used to benchmark the [PL-MOGA](https://github.com/hkneiding/PL-MOGA) approach presented in the associated paper.
+
 ###### [descriptors/](descriptors/)
 - Directory containing the RDKit, steric and electronic descriptors for all ligands in separate files, the scripts to create them, and a script to merge them into one.
 
