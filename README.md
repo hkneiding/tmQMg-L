@@ -1,7 +1,7 @@
 
 # tmQMg-L
 
-This repository contains the data files of the ligands dataset tmQMg-L containing 29k ligands extracted from the Cambridge Structural Database. The ligands come with their atomic positions, metal-coordinating atom indices and corresponding formal charges. Electronic, steric and cheminformatics descriptors have been calculated for each ligand and are included as well. Details on how the data was compiled can be found in the corresponding publication [Directional Multiobjective Optimization of Metal Complexes at the Billion-Scale with the tmQMg-L Dataset and PL-MOGA Algorithm](https://chemrxiv.org/engage/chemrxiv/article-details/651051d4ed7d0eccc32252ea).
+This repository contains the data files of the ligands dataset tmQMg-L containing 29k ligands extracted from the Cambridge Structural Database. The ligands come with their atomic positions, metal-coordinating atom indices and corresponding formal charges. Electronic, steric and cheminformatics descriptors have been calculated for each ligand and are included as well. Details on how the data was compiled can be found in the corresponding publication [Directional multiobjective optimization of metal complexes at the billion-system scale](https://www.nature.com/articles/s43588-024-00616-5).
 
 ![tmQMg-L_Figure](tmQMg-L.png)
 
