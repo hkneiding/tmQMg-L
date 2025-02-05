@@ -1,7 +1,7 @@
 
 # tmQMg-L
 
-This repository contains the data files of the ligands dataset tmQMg-L containing 29k ligands extracted from the Cambridge Structural Database. The ligands come with their atomic positions, metal-coordinating atom indices and corresponding formal charges. Electronic, steric and cheminformatics descriptors have been calculated for each ligand and are included as well. Details on how the data was compiled can be found in the corresponding publication [Directional multiobjective optimization of metal complexes at the billion-system scale](https://www.nature.com/articles/s43588-024-00616-5).
+This repository contains the data files of the ligands dataset tmQMg-L containing 35k ligands extracted from the tmQMg dataset containing transition metal complexes reported in the Cambridge Structural Database. The ligands come with their atomic positions, metal-coordinating atom indices and corresponding formal charges. Electronic, steric and cheminformatics descriptors have been calculated for each ligand and are included as well. Details on how the data was compiled can be found in the corresponding publication [Directional multiobjective optimization of metal complexes at the billion-system scale](https://www.nature.com/articles/s43588-024-00616-5).
 
 ![tmQMg-L_Figure](tmQMg-L.png)
 
@@ -25,9 +25,6 @@ This repository contains the data files of the ligands dataset tmQMg-L containin
 - The calculated RDKit, steric and electronic descriptors for all ligands as described in the publication.
 - Some properties were specifically calculated based on either the geometry of the most stable occurrence or for the gas phase optimized structure. The column names reflect this with the prefix `L*` to refer to the most stable occurrence and the prefix `L_free` to refer to the relaxed structure. Properties without a prefix were simply calculated based on the ligands SMILES string.
 
-###### [stable.csv](stable.csv)
-- List of all ligands and their most stable occurrence.
-
 ###### [weisfeiler_lehman_graph_hashes.csv](weisfeiler_lehman_graph_hashes.csv)
 - List of Weisfeiler-Lehman graph hashes for all ligands.
 - The column `base_hash` refers to the hashes only considering connectivity.
@@ -39,9 +36,6 @@ This repository contains the data files of the ligands dataset tmQMg-L containin
 ###### [benchmarks/1.37M_space_ground_truth.csv](benchmarks/1.37M_space_ground_truth.csv)
 - The ground truth values for Polarizability and HOMO-LUMO gap calculated with GFN2-xTB of a chemical space of square-planar palladium (II) complexes with 50 monodentate ligands (25 neutral, 25 mono-anionic). This space was used to benchmark the [PL-MOGA](https://github.com/hkneiding/PL-MOGA) approach presented in the associated paper.
 
-###### [descriptors/](descriptors/)
-- Directory containing the RDKit, steric and electronic descriptors for all ligands in separate files, the scripts to create them, and a script to merge them into one.
-
 ###### [xyz/](xyz/)
 - Directory containing the geometries of all ligands ([xyz/ligands_xyzs.xyz](xyz/ligands_xyzs.xyz)), only the stable ligands ([xyz/ligands_stable_xyzs.xyz](xyz/ligands_stable_xyzs.xyz)) and the optimized stable ligands ([xyz/ligands_stable_xyzs_opt.xyz](xyz/ligands_stable_xyzs_opt.xyz)).
 - With Python the xyzs can easily be loaded as a dictionary with the occurrence names as keys and the xyzs as values using the following code snippet:
@@ -51,6 +45,10 @@ with open('./xyz/ligands_xyzs.xyz)', 'r') as fh:
 	for xyz in fh.read().split('\n\n'):
 		xyzs[xyz.split('\n')[1]] = xyz
 ```
+
+###### [stages/](stages/)
+- Directory containing subdirectories with the scripts for each processing step in the ligand extraction pipeline.
+
 ---
 
 [![CC BY NC 4.0][cc-by-nc-image]][cc-by-nc]
