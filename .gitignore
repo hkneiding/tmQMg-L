@@ -1,0 +1,8 @@
+**/*.out
+**/*.sh
+**/*.txt
+**/*.log
+**/__pycache__
+**/sp/
+**/opt+sp/
+**/.ligands_raw.csv
