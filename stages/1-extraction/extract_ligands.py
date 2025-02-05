@@ -593,7 +593,8 @@ def get_nbo_extracted_ligands(data_dir: str):
 # - - - entry point - - - #
 if __name__ == "__main__":
 
-    nbo_ligands = get_nbo_extracted_ligands('/home/hkneiding/Documents/UiO/Data/tmQMg/json/')
+    # specify directory containing the extracted QM data in json format
+    nbo_ligands = get_nbo_extracted_ligands('./json/')
 
     dataset_name = 'ligands'
     dataset_directory = './'

@@ -44,6 +44,7 @@ def get_tmc_xyzs(data_dir: str):
 
     return xyzs
 
-tmc_xyzs = get_tmc_xyzs('/home/hkneiding/Documents/UiO/Data/tmQMg/json/')
+# specify directory containing the extracted QM data in json format
+tmc_xyzs = get_tmc_xyzs('./json/')
 with open('tmc_xyzs.xyz', 'w') as fh:
     fh.write('\n\n'.join(tmc_xyzs))
