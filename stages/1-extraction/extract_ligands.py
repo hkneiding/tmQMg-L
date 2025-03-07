@@ -391,16 +391,6 @@ def get_nbo_extracted_ligands(data_dir: str):
         if file.split('.')[-1] != 'json':
             continue   
 
-        # TMCs for which to skip ligand extraction
-        skip = [
-            'SURLEX', 'DAKZEU', 'MCTPCR', 'AHIDEB', 'NANPYZ', 'PDTCNI', 'MQUPTI', 'PHGFAN',
-            'SOXNOI', 'ACPXNI', 'HGTHUR', 'PHGBAN', 'COTNUU', 'CPMONC', 'GECHAX', 'NABGON',
-            'JAPROH', 'TEFZOT', 'IPTCNI', 'DAMTIU', 'VIYKET', 'IPTCHG', 'DEFJUT', 'CMEEAM',
-            'JEBPUB', 'SANLEY', 'CFMNTV', 'KORGED', 'MEBCUU', 'MECBHG', 'XEDREE', 'NEBQIU'
-        ]
-        if file.split('.')[0] in skip:
-            continue
-
         qm_data = QmData.from_dict(FileHandler.read_dict_from_json_file(data_dir + file))
         # generate graph
         graph = gg.generate_graph(qm_data)
@@ -494,7 +484,7 @@ def get_nbo_extracted_ligands(data_dir: str):
             if make_new_entry:
 
                 smiles, smiles_metal_bond_node_idx_groups = get_smiles_and_smiles_metal_connecting_index_group(xyz, metal_bond_node_idx_groups)
-
+                
                 # add ligand to dictionary
                 ligands[subgraph.id] = {
                     
@@ -582,7 +572,8 @@ def get_nbo_extracted_ligands(data_dir: str):
                 # electronic info
                 'charge': charge_to_consider,
                 'is_alternative_charge': 0 if not j else 1,
-                'occurrence': len(set([_.split('-')[0] for _ in ligand['charge_occurrences'][charge_to_consider]]))
+                'occurrence': len(set([_.split('-')[0] for _ in ligand['charge_occurrences'][charge_to_consider]])),
+                'weisfeiler_lehman_graph_hash': nx.weisfeiler_lehman_graph_hash(nx.Graph(ligand['networkx']), node_attr='node_label', iterations=3)
             }
 
     new_ligands = pd.DataFrame(new_ligands).T
@@ -594,7 +585,7 @@ def get_nbo_extracted_ligands(data_dir: str):
 if __name__ == "__main__":
 
     # specify directory containing the extracted QM data in json format
-    nbo_ligands = get_nbo_extracted_ligands('./json/')
+    nbo_ligands = get_nbo_extracted_ligands('./tmQMg_json/')
 
     dataset_name = 'ligands'
     dataset_directory = './'
@@ -618,7 +609,7 @@ if __name__ == "__main__":
         fingerprints.append({'name': nbo_ligands.index[i]} | fingerprint_dict)
         
         # make misc csv
-        misc_keys = ['smiles', 'stoichiometry', 'occurrence', 'parent_metal_occurrences', 'smiles_metal_bond_node_idx_groups', 'metal_bond_node_idx_groups']
+        misc_keys = ['stoichiometry', 'occurrence', 'parent_metal_occurrences', 'metal_bond_node_idx_groups', 'smiles', 'smiles_metal_bond_node_idx_groups', 'weisfeiler_lehman_graph_hash']
         misc_dict = {key: ligand[key] for key in misc_keys}
         misc.append({'name': nbo_ligands.index[i]} | misc_dict)
 
